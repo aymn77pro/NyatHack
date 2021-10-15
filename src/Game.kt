@@ -14,4 +14,12 @@ val aureColer  = if (aureIsVisbl)"green" else "none!"
  else if (healthpoint in 15..74)"$name pretty hurt"
  else    "$name is in awful condition!"
 println(heathstatus)
+ val karma= (Math.pow(Math.random(),(110 - healthpoint)/100.0)*20.0).toInt()
+ val karmastatus:String = when(karma){
+  in 0..5 -> "red"
+  in 6..10 -> "orange"
+  in 11..15 -> "purple"
+  else ->  "green"
+ }
+ println("your karma color is $karmastatus")
 }
