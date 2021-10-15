@@ -7,11 +7,10 @@ fun main(){
     //aure
  if (aureIsVisbl){println("green")}
  else{println("none")}
- if (healthpoint==100){ println("$name is in excellent condition!")}
- else if (healthpoint>=90){ println("$name have few scratches!")}
- else if (healthpoint>=75){
-     if (isBlessed){println("$name has some minor wounds but is healing quite quickly!")}
-     else{ println("$name has some minor wounds")}}
- else if (healthpoint>=15){println(name + "look pretty hurt")}
- else{println("$name is in awful condition!")}
+ val heathstatus : String = if (healthpoint==100){ "$name is in excellent condition!"}
+ else if (healthpoint>=90){"$name have few scratches!"}
+ else if (healthpoint>=75){ if (isBlessed){"$name has some minor wounds but is healing quite quickly!"} else{ "$name has some minor wounds"}}
+ else if (healthpoint>=15){"$name pretty hurt"}
+ else{"$name is in awful condition!"}
+println(heathstatus)
 }
