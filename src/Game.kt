@@ -1,8 +1,12 @@
 fun main(){
- val name = "aymn"
- var healthpoint = 89
- val isBlessed = true
- val IsImmortal = false
+ println("your player name")
+ val name = readLine()!!.toString()
+ println("your health")
+ var healthpoint = readLine()!!.toInt()
+ println("are you blessed (true or false)")
+ val isBlessed = readLine()!!.toBoolean()
+ println(" are you Immortal (true or false)")
+ val IsImmortal = readLine()!!.toBoolean()
  var HP = healthpoint
  // aure is visible or not
  val aureIsVisbl = isBlessed && healthpoint in 50..100 || IsImmortal
@@ -33,5 +37,4 @@ val Blessed = if (isBlessed)"Blessed" else "NOT Blessed"
   else ->  "green"
  }
  println("your karma color is $karmastatus")
-
 }
